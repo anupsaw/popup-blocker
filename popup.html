@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* button {
+            height: 30px;
+            width: 30px;
+            outline: none;
+        } */
+
+        .sz-btn {
+            /* padding: 10px; */
+            border: 1px solid #00bcd4;
+            background: transparent;
+            color: #00bcd4;
+            cursor: pointer;
+            height: 30px;
+            /* width: 30px; */
+            /* margin: 0 2px; */
+            width: 100%;
+        }
+
+        .sz-btn:hover,
+        .sz-btn:active,
+        .sz-btn:focus {
+            border-color: #008ba3;
+            color: #008ba3;
+        }
+
+        .sz-btn:focus {
+            outline-color: #008ba3;
+        }
+
+        .sz-input {
+            padding: 5px;
+        }
+
+        .sz-space-btm {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Sahaz - Popup Blocker</h3>
+    <input type="text"
+           id="szAddSiteInput"
+           class="sz-input sz-space-btm"
+           placeholder="url of site">
+
+    <button id="szAddSiteBtn"
+            class="sz-btn sz-space-btm">Add</button>
+    <button id="szClearSiteBtn"
+            class="sz-btn">Clear All</button>
+    <script src="popup.js"></script>
+
+</body>
+
+</html>

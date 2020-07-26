@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "custom pop up blocker",
+    "version": "0.0.1",
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "declarativeContent",
+        "storage",
+        "<all_urls>"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://127.0.0.1/*"
+            ],
+            "js": [
+                "block.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_title": "Add site url which need to block all kind of popups",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    }
+}
