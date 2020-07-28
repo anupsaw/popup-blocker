@@ -20,11 +20,11 @@ function hasMatch(url, id) {
         console.log('Url List', data);
         const urlList = data.szUrlList && JSON.parse(data.szUrlList);
         let isMatched = false;
-        urlList.forEach(urlItem => {
+        urlList && urlList.forEach(urlItem => {
             isMatched = isMatched || url && url.indexOf(urlItem) > -1;
         });
 
-        if (urlList.indexOf(url) > -1) {
+        if (urlList && urlList.indexOf(url) > -1) {
             parentTab.ids.push(id);
         }
         console.log(parentTab, 'black list url');

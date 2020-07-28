@@ -12,10 +12,23 @@ chrome.storage.sync.get('szUrlList', function (data) {
 szAddSiteBtn.onclick = function (element) {
     const siteUrl = document.getElementById('szAddSiteInput').value;
     console.log(siteUrl);
+    let url;
+    let host;
+    try {
+        url = new URL(siteUrl);
+        host = url.host;
+        console.log('Origin', url, host, siteUrl);
+    } catch (error) {
+
+    }
     if (!szUrl.list) {
         szUrl.list = [];
     }
-    szUrl.list.push(siteUrl);
+    if (szUrl.list.indexOf(host) === -1) {
+        szUrl.list.push(host);
+    }
+
+    document.getElementById('szAddSiteInput').value = '';
     console.log(szUrl.list);
     chrome.storage.sync.set({ szUrlList: JSON.stringify(szUrl.list) })
 };

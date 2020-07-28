@@ -1,0 +1,30 @@
+.sz-btn {
+    /* padding: 10px; */
+    border: 1px solid #00bcd4;
+    background: transparent;
+    color: #00bcd4;
+    cursor: pointer;
+    height: 30px;
+    /* width: 30px; */
+    /* margin: 0 2px; */
+    width: 100%;
+}
+
+.sz-btn:hover,
+.sz-btn:active,
+.sz-btn:focus {
+    border-color: #008ba3;
+    color: #008ba3;
+}
+
+.sz-btn:focus {
+    outline-color: #008ba3;
+}
+
+.sz-input {
+    padding: 5px;
+}
+
+.sz-space-btm {
+    margin-bottom: 15px;
+}
